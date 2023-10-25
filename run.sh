@@ -18,6 +18,7 @@ if [ ! -f "$pretrain_emb" ] && [ -f "word2vec_100.zip" ]; then
 fi
 
 cd src
+make clean
 make cate
 cd ..
 
