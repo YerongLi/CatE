@@ -12,7 +12,7 @@
 green=`tput setaf 2`
 reset=`tput sgr0`
 
-corpusname=movie
+corpusname=movies
 # dataset directory
 # CORPUS_DIR=../datasets/YOUR_CORPUS
 CORPUS_DIR=../datasets/${corpusname}
