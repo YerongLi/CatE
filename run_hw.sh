@@ -1,12 +1,12 @@
 # dataset directory
-dataset=movies
+dataset=$1
 
 # text file name; one document per line
-text_file=phrase_text.txt
+text_file="phrase_text.txt"
 
 # category name file
-# topic_file=locations.txt
-topic_file=occupation.txt
+topic=$2
+topic_file="${topic}.txt"
 
 topic=$(echo ${topic_file} | cut -d'.' -f 1)
 

@@ -1,0 +1,60 @@
+london
+new york city
+los angeles
+paris
+tokyo
+sydney
+rome
+berlin
+beijing
+moscow
+cairo
+rio de janeiro
+istanbul
+mumbai
+toronto
+barcelona
+dubai
+buenos aires
+amsterdam
+vancouver
+san francisco
+chicago
+houston
+miami
+delhi
+johannesburg
+seoul
+bangkok
+nairobi
+stockholm
+england
+united states
+france
+japan
+australia
+italy
+germany
+china
+russia
+egypt
+brazil
+turkey
+india
+canada
+spain
+united arab emirates
+argentina
+netherlands
+south africa
+south korea
+thailand
+kenya
+sweden
+greece
+mexico
+peru
+iran
+israel
+egypt
+jordan
