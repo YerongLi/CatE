@@ -5,7 +5,8 @@ dataset=movies
 text_file=phrase_text.txt
 
 # category name file
-topic_file=locations.txt
+# topic_file=locations.txt
+topic_file=occupation.txt
 
 topic=$(echo ${topic_file} | cut -d'.' -f 1)
 
