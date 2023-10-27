@@ -21,7 +21,6 @@ musician
 actor
 scientist
 athlete
-salesperson
 journalist
 librarian
 farmer
