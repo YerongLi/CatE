@@ -20,10 +20,8 @@ with open('emb_news_category_w.txt', 'r') as word_file:
 categories = {}
 for category, embeds in word_embeddings.items():
     if category in topic_embeddings:
-        categories[category] = [f"{category} {topic_embeddings[category]}\n{category} {embeds}\n"]
+        embeds = [f"{topic_embeddings[category]}\n"] + [f"{category} {embeds}"]
 
-# Save embeddings for each category into separate files
-for category, embeds in categories.items():
-    filename = f"{category}_terms.txt"
-    with open(filename, 'w') as file:
-        file.write(''.join(embeds))
+        filename = f"{category}_terms.txt"
+        with open(filename, 'w') as file:
+            file.write('\n'.join(embeds))
