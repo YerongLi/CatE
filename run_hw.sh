@@ -5,8 +5,8 @@ dataset=$1
 text_file="phrase_text.txt"
 
 # category name file
-topic=$2
-topic_file="${topic}.txt"
+topic=$dataset
+topic_file="${dataset}_category.txt"
 
 topic=$(echo ${topic_file} | cut -d'.' -f 1)
 
@@ -26,7 +26,7 @@ cd ..
 ./src/cate -train ./datasets/${dataset}/${text_file} -topic-name ./datasets/${dataset}/${topic_file} \
 	-load-emb ${pretrain_emb} \
 	-spec ./datasets/${dataset}/emb_${topic}_spec.txt \
-	-res ./datasets/${dataset}/res_${topic}.txt -k 10 -expand 1 \
+	-res ./datasets/${dataset}/res_${topic}.txt -k 10 -expand 20 \
 	-word-emb ./datasets/${dataset}/emb_${topic}_w.txt -topic-emb ./datasets/${dataset}/emb_${topic}_t.txt \
 	-size 100 -window 5 -negative 5 -sample 1e-3 -min-count 5 \
 	-threads 20 -binary 0 -iter 10 -pretrain 2
