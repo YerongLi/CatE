@@ -1,4 +1,3 @@
-
 # Read embeddings from emb_news_category_w.txt and create a dictionary
 embeddings = {}
 with open('emb_news_category_w.txt', 'r') as emb_file:
@@ -6,7 +5,7 @@ with open('emb_news_category_w.txt', 'r') as emb_file:
         if len(line.strip()) > 0:
             items = line.split()
             word = items[0]
-            vector = [float(val) for val in items[1:]]
+            vector = ' '.join(items[1:])
             embeddings[word] = vector
 
 # Read words from res_news_category.txt and find their embeddings
@@ -19,13 +18,12 @@ with open('res_news_category.txt', 'r') as res_file:
         category_embed = []
         for word in words:
             if word in embeddings:
-                category_embed.append(embeddings[word])
+                category_embed.append(f"{word} {embeddings[word]}")
         if category_name:
             categories[category_name] = category_embed[:10]  # Considering the first 10 embeddings
 
-# Display or process the obtained word embeddings for each category
+# Save word embeddings for each category into separate files
 for category, embeds in categories.items():
-    print(f"Category: {category}")
-    for i, emb in enumerate(embeds):
-        print(f"Word {i + 1}: {emb}")
-
+    filename = f"{category}.terms.txt"
+    with open(filename, 'w') as file:
+        file.write('\n'.join(embeds))
