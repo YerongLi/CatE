@@ -1,6 +1,6 @@
-# Read embeddings from emb_news_category_w.txt and create a dictionary
+# Read embeddings from emb_movies_category_w.txt and create a dictionary
 embeddings = {}
-with open('emb_news_category_w.txt', 'r') as emb_file:
+with open('emb_movies_category_w.txt', 'r') as emb_file:
     for line in emb_file:
         if len(line.strip()) > 0:
             items = line.split()
@@ -8,9 +8,9 @@ with open('emb_news_category_w.txt', 'r') as emb_file:
             vector = ' '.join(items[1:])
             embeddings[word] = vector
 
-# Read topic embeddings from emb_news_category_t.txt and create a dictionary
+# Read topic embeddings from emb_movies_category_t.txt and create a dictionary
 topic_embeddings = {}
-with open('emb_news_category_t.txt', 'r') as topic_file:
+with open('emb_movies_category_t.txt', 'r') as topic_file:
     lines = topic_file.readlines()[1:]  # Exclude the first line
     for line in lines:
         items = line.split()
@@ -18,9 +18,9 @@ with open('emb_news_category_t.txt', 'r') as topic_file:
         vector = ' '.join(items[1:])
         topic_embeddings[topic] = vector
 
-# Read words from res_news_category.txt and find their embeddings
+# Read words from res_movies_category.txt and find their embeddings
 categories = {}
-with open('res_news_category.txt', 'r') as res_file:
+with open('res_movies_category.txt', 'r') as res_file:
     lines = res_file.readlines()
     for i in range(0, len(lines), 2):
         category_name = lines[i].split("Category (")[1].split("):")[0]
