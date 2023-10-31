@@ -24,6 +24,6 @@ for category, embeds in word_embeddings.items():
 
 # Save embeddings for each category into separate files
 for category, embeds in categories.items():
-    filename = f"{category}.terms.txt"
+    filename = f"{category}_terms.txt"
     with open(filename, 'w') as file:
         file.write(''.join(embeds))
