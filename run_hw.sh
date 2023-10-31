@@ -29,4 +29,4 @@ cd ..
 	-res ./datasets/${dataset}/res_${topic}.txt -k 10 -expand 20 \
 	-word-emb ./datasets/${dataset}/emb_${topic}_w.txt -topic-emb ./datasets/${dataset}/emb_${topic}_t.txt \
 	-size 100 -window 5 -negative 5 -sample 1e-3 -min-count 5 \
-	-threads 20 -binary 0 -iter 10 -pretrain 2
+	-threads 20 -binary 0 -iter 15 -pretrain 2
