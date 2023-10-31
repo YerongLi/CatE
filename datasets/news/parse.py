@@ -24,6 +24,6 @@ with open('res_news_category.txt', 'r') as res_file:
 
 # Save word embeddings for each category into separate files
 for category, embeds in categories.items():
-    filename = f"{category}.terms.txt"
+    filename = f"{category}_terms.txt"
     with open(filename, 'w') as file:
         file.write('\n'.join(embeds))
